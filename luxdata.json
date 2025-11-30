@@ -1,1 +1,17 @@
-
+{
+"trend_catcher_1": "green",
+"trend_catcher_3": "red",
+"trend_catcher_5": "green",
+"trend_catcher_10": "red",
+"trend_catcher_30": "green",
+"trend_catcher_1h": "red",
+"broken_trendline": "yes",
+"order_blocks": {
+"bullish": "entered",
+"bearish": "N/A"
+},
+"exits_3min": "sell",
+"exits_5min": "hold",
+"exits_15min": "buy",
+"exits_30min": "sell"
+}
