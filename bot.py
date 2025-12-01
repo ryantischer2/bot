@@ -33,6 +33,8 @@ market_data_file = 'market_data.csv'
 today_date = datetime.now().strftime('%Y-%m-%d')
 lux_oscillator_file = f'lux_oscillator_{today_date}.json'
 lux_price_action_file = f'lux_price_action_{today_date}.json'
+lux_trendcatcher_file = f'lux_trendcatcher_{today_date}.json'
+lux_exits_file = f'lux_exits_{today_date}.json'
 
 def load_position():
     try:
@@ -223,21 +225,50 @@ def get_macro():
     return fed_rate, cpi, treasury_yield
 
 def get_sentiment():
-    """Load LuxAlgo alerts from JSON file and format for prompt"""
+    today_date = datetime.now().strftime('%Y-%m-%d')
+    lux_trendcatcher_file = f'lux_trendcatcher_{today_date}.json'
+    lux_exits_file = f'lux_exits_{today_date}.json'
+    
+    # Ensure files exist as empty lists if not present
+    if not os.path.exists(lux_trendcatcher_file):
+        with open(lux_trendcatcher_file, 'w') as f:
+            json.dump([], f)
+    
+    if not os.path.exists(lux_exits_file):
+        with open(lux_exits_file, 'w') as f:
+            json.dump([], f)
+    
     try:
-        with open('/home/ryan_tischer/luxdata.json', 'r') as f:
-            data = json.load(f)
-        # Extract trend catcher for various time frames
+        # Load trend catcher data (assuming it's a list of alerts with 'tf' and 'alert' or similar)
+        with open(lux_trendcatcher_file, 'r') as f:
+            trend_data = json.load(f)
+        
+        # Extract latest trend catcher for each timeframe
         time_frames = ['1min', '3min', '5min', '10min', '30min', '1h']
-        trend_catcher = ', '.join([f"{tf}: {data.get(f'trend_catcher_{tf.replace('min', '') if 'min' in tf else tf}', 'N/A')}" for tf in time_frames])
-        # Extract other data
-        broken_trendline = data.get('broken_trendline', 'N/A')
-        order_blocks = data.get('order_blocks', {'bullish': 'N/A', 'bearish': 'N/A'})
-        order_blocks_str = f"Bullish: {order_blocks.get('bullish', 'N/A')}, Bearish: {order_blocks.get('bearish', 'N/A')}"
-        # Extract exits (now as lists)
+        trend_catcher = {}
+        for tf in time_frames:
+            # Find latest alert for this tf (assuming alerts have 'tf' and 'alert' fields, and 'bartime' for sorting)
+            tf_alerts = [a for a in trend_data if a.get('tf') == tf]
+            if tf_alerts:
+                latest = max(tf_alerts, key=lambda a: a.get('bartime', 0))
+                trend_catcher[tf] = latest.get('alert', 'N/A')
+            else:
+                trend_catcher[tf] = 'N/A'
+        trend_catcher_str = ', '.join([f"{tf}: {trend_catcher[tf]}" for tf in time_frames])
+        
+        # Load exits data
+        with open(lux_exits_file, 'r') as f:
+            exits_data = json.load(f)
+        
+        # Extract exits per timeframe (allow multiple)
         exit_frames = ['3min', '5min', '15min', '30min']
-        exits = ', '.join([f"{tf}: {', '.join(data.get(f'exits_{tf}', [])) if isinstance(data.get(f'exits_{tf}'), list) else data.get(f'exits_{tf}', 'N/A')}" for tf in exit_frames])
-        return f"LuxAlgo Trend Catcher: {trend_catcher}; Broken Trendline: {broken_trendline}; Order Blocks: {order_blocks_str}; Exits: {exits}"
+        exits = {}
+        for tf in exit_frames:
+            tf_exits = [a.get('alert', 'N/A') for a in exits_data if a.get('tf') == tf]
+            exits[tf] = ', '.join(tf_exits) if tf_exits else 'N/A'
+        exits_str = ', '.join([f"{tf}: {exits[tf]}" for tf in exit_frames])
+        
+        return f"LuxAlgo Trend Catcher: {trend_catcher_str}; Exits: {exits_str}"
     except Exception as e:
         return "No LuxAlgo data available"
 
@@ -301,7 +332,7 @@ def build_prompt(current_data, slope, indicators, vix, fundamentals, macro, sent
     # Add existing position info
     position_info = "No open position."
     if current_position:
-        position_info = f"Current open position: {current_position['type']} with {current_position['contracts']} contracts entered at {current_position['entry_price']} at {current_position['entry_time']} and now your focus is closing the trade for profit."
+        position_info = f"You entered a {current_position['type']} position at {current_position['entry_time']} and now your focus is closing the trade for profit. Current open position: {current_position['type']} with {current_position['contracts']} contracts entered at {current_position['entry_price']}."
     # Add EMA info
     ema_21 = indicators['ema_21']
     ema_relation = "above" if current_price > ema_21 else "below" if current_price < ema_21 else "at"
