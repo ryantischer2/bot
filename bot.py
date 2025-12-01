@@ -301,7 +301,7 @@ def build_prompt(current_data, slope, indicators, vix, fundamentals, macro, sent
     # Add existing position info
     position_info = "No open position."
     if current_position:
-        position_info = f"Current open position: {current_position['type']} with {current_position['contracts']} contracts entered at {current_position['entry_price']}."
+        position_info = f"Current open position: {current_position['type']} with {current_position['contracts']} contracts entered at {current_position['entry_price']} at {current_position['entry_time']} and now your focus is closing the trade for profit."
     # Add EMA info
     ema_21 = indicators['ema_21']
     ema_relation = "above" if current_price > ema_21 else "below" if current_price < ema_21 else "at"
@@ -378,13 +378,13 @@ def handle_signal(signal, spy_price, time_of_day):
     global current_position
     if signal == 'long':
         if current_position is None:
-            current_position = {'type': 'long', 'entry_price': spy_price, 'contracts': 10}
+            current_position = {'type': 'long', 'entry_price': spy_price, 'contracts': 10, 'entry_time': time_of_day}
             save_position(current_position)
             send_to_discord(f"Entered LONG at {spy_price} - Time: {time_of_day}")
             send_to_traderspost("buy")
     elif signal == 'short':
         if current_position is None:
-            current_position = {'type': 'short', 'entry_price': spy_price, 'contracts': 10}
+            current_position = {'type': 'short', 'entry_price': spy_price, 'contracts': 10, 'entry_time': time_of_day}
             save_position(current_position)
             send_to_discord(f"Entered SHORT at {spy_price} - Time: {time_of_day}")
             send_to_traderspost("buy")
@@ -466,7 +466,7 @@ while True:
         # Only query AI between 9:45 and 12:00 ET
         if now.hour == 9 and now.minute >= 45 or now.hour == 10 or now.hour == 11 or (now.hour == 12 and now.minute == 0):
             prompt = build_prompt(current_data, slope, indicators, vix, fundamentals, macro, sentiment, oscillator_alerts, price_action_alerts, historical, candle, time_of_day, channel_1min, channel_30min)
-            
+            send_to_discord(f"Prompt sent to xAI: {prompt}")
             signal = send_to_xai(prompt)
             if signal in ['long', 'short', 'close long', 'close short']:
                 send_to_discord(f"AI Signal: {signal} at {time_of_day} - SPY Price: {spy_price}")
