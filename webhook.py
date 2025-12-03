@@ -1,9 +1,26 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 import json
 from datetime import datetime
 import os
 
 app = Flask(__name__)
+
+# Whitelist of allowed IP addresses (TradingView webhook IPs)
+ALLOWED_IPS = [
+    '52.89.214.238',
+    '34.212.75.30',
+    '54.218.53.128',
+    '52.32.178.7'
+]
+
+def check_ip():
+    client_ip = request.remote_addr
+    if client_ip not in ALLOWED_IPS:
+        abort(403)  # Forbidden if IP not in whitelist
+
+@app.before_request
+def limit_remote_addr():
+    check_ip()
 
 @app.route('/lux_oscillator', methods=['POST'])
 def lux_oscillator_webhook():
