@@ -67,9 +67,14 @@ def get_tradier_quotes(symbols):
     """Fetch real-time quotes for symbols like SPY, ^VIX"""
     url = 'https://api.tradier.com/v1/markets/quotes'
     params = {'symbols': ','.join(symbols)}
-    response = requests.get(url, headers=tradier_headers, params=params)
-    return response.json()['quotes']['quote'] if response.ok else None
-
+    try:
+        response = requests.get(url, headers=tradier_headers, params=params, timeout=10)
+        if response.status_code == 200:
+            return response.json().get('quotes', {})
+    except Exception as e:
+        print(f"Tradier quote request failed: {e}")
+    return None
+    
 def get_tradier_history(symbol, interval='1min', start=None, end=None):
     """Fetch intraday history for anchored VWAP calculation"""
     url = 'https://api.tradier.com/v1/markets/history'
