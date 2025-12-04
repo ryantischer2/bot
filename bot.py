@@ -464,59 +464,95 @@ def monitor_stop_loss(spy_price, time_of_day, atr):
 # Main loop (run every 1 min during market hours)
 while True:
     now = datetime.now()
-    if now.hour >= 9 and now.hour < 16:  # ET market hours approx
-        # Fetch data
+    
+    # Market hours: 9:30 AM – 4:00 PM ET (UTC-5 / UTC-4 during DST)
+    if 9 <= now.hour < 16:
+        # Fetch real-time quotes
         quotes = get_tradier_quotes(['SPY', '^VIX'])
-        if not quotes:
+        if not quotes or 'quote' not in quotes:
+            print("No valid quote data from Tradier")
             time.sleep(60)
             continue
-        spy_quote = quotes[0] if quotes[0]['symbol'] == 'SPY' else quotes[1]
-        spy_price = spy_quote['last']
-        vix = quotes[1]['last'] if quotes[1]['symbol'] == '^VIX' else quotes[0]['last']
-        
+
+        q = quotes['quote']
+        # Handle single dict or list of dicts
+        if isinstance(q, dict):
+            quote_items = [q]
+        else:
+            quote_items = q
+
+        spy_price = None
+        vix = 0.0
+
+        for item in quote_items:
+            if not isinstance(item, dict):
+                continue
+            symbol = item.get('symbol')
+            last = item.get('last')
+            if symbol == 'SPY' and last is not None:
+                spy_price = float(last)
+            elif symbol == '^VIX' and last is not None:
+                vix = float(last)
+
+        if spy_price is None:
+            print("SPY price not available")
+            time.sleep(60)
+            continue
+
+        print(f"SPY: ${spy_price:.2f} | VIX: {vix:.2f}")
+
+        # Fetch 1-minute bars for VWAP and indicators
         df_1min = get_tradier_history('SPY', interval='1min')
         if df_1min.empty:
+            print("No 1min data")
             time.sleep(60)
             continue
-        
-        append_market_data(df_1min)  # Collect data
-        
-        df_30min = get_tradier_history('SPY', interval='30min')
-        
+
+        # Append to daily market data file
+        append_market_data(df_1min)
+
+        # Compute indicators and VWAP
         current_data, slope = compute_anchored_vwap(df_1min)
         indicators = compute_indicators(df_1min)
         channel_1min = calculate_trend_channel(df_1min)
-        channel_30min = calculate_trend_channel(df_30min)
+        channel_30min = calculate_trend_channel(get_tradier_history('SPY', interval='30min'))
         fundamentals = get_fundamentals()
         macro = get_macro()
         sentiment = get_sentiment()
         oscillator_alerts = get_oscillator_alerts()
         price_action_alerts = get_price_action_alerts()
-        historical = get_historical_context(df_1min.shift(periods=1))  # Approx prev day
+        historical = get_historical_context(df_1min.shift(periods=1))
         candle = get_candle_patterns(df_1min)
         time_of_day = now.strftime('%H:%M ET')
-        
-        # Check for stop loss every poll
+
+        # Stop-loss check (every tick)
         monitor_stop_loss(spy_price, time_of_day, indicators['atr'])
-        
-        # Only query AI between 9:45 and 12:00 ET
-        if now.hour == 9 and now.minute >= 45 or now.hour == 10 or now.hour == 11 or (now.hour == 12 and now.minute == 0):
-            prompt = build_prompt(current_data, slope, indicators, vix, fundamentals, macro, sentiment, oscillator_alerts, price_action_alerts, historical, candle, time_of_day, channel_1min, channel_30min)
-            send_to_discord(f"Prompt sent to xAI: {prompt}")
+
+        # AI query window: 9:45 AM – 12:00 PM ET
+        if (now.hour == 9 and now.minute >= 45) or (10 <= now.hour < 12) or (now.hour == 12 and now.minute == 0):
+            prompt = build_prompt(
+                current_data, slope, indicators, vix, fundamentals, macro,
+                sentiment, oscillator_alerts, price_action_alerts,
+                historical, candle, time_of_day, channel_1min, channel_30min
+            )
+            send_to_discord(f"Prompt sent to xAI:\n```\n{prompt}\n```")
+
             signal = send_to_xai(prompt)
             if signal in ['long', 'short', 'close long', 'close short']:
-                send_to_discord(f"AI Signal: {signal} at {time_of_day} - SPY Price: {spy_price}")
+                send_to_discord(f"AI SIGNAL: {signal.upper()} @ {time_of_day} | SPY: ${spy_price:.2f}")
                 handle_signal(signal, spy_price, time_of_day)
-            
-            # At noon, close if open
+
+            # Force close at noon ET
             if now.hour == 12 and now.minute == 0 and current_position:
-                signal_close = 'close long' if current_position['type'] == 'long' else 'close short'
-                handle_signal(signal_close, spy_price, time_of_day)
-        
-        # Monitor for price change exit
+                close_sig = 'close long' if current_position['type'] == 'long' else 'close short'
+                handle_signal(close_sig, spy_price, time_of_day)
+
+        # Partial profit taking on $2 move
         monitor_position(spy_price, time_of_day)
-    
-    elif now.hour >= 16:  # After market close, erase data
+
+    elif now.hour >= 16:
+        # After market close: clean up daily data
         erase_market_data()
-    
+        print("Market closed — daily data erased.")
+
     time.sleep(60)  # Poll every minute
