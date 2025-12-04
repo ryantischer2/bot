@@ -24,7 +24,13 @@ def limit_remote_addr():
 
 @app.route('/lux_oscillator', methods=['POST'])
 def lux_oscillator_webhook():
-    data = request.json
+    if request.is_json:
+        data = request.get_json()
+    else:
+        try:
+            data = json.loads(request.data.decode('utf-8'))
+        except json.JSONDecodeError:
+            return jsonify({'error': 'invalid json'}), 400
     today_date = datetime.now().strftime('%Y-%m-%d')
     file_name = f'lux_oscillator_{today_date}.json'
     
@@ -43,7 +49,13 @@ def lux_oscillator_webhook():
 
 @app.route('/lux_price_action', methods=['POST'])
 def lux_price_action_webhook():
-    data = request.json
+    if request.is_json:
+        data = request.get_json()
+    else:
+        try:
+            data = json.loads(request.data.decode('utf-8'))
+        except json.JSONDecodeError:
+            return jsonify({'error': 'invalid json'}), 400
     today_date = datetime.now().strftime('%Y-%m-%d')
     file_name = f'lux_price_action_{today_date}.json'
     
@@ -62,7 +74,13 @@ def lux_price_action_webhook():
 
 @app.route('/lux_trendcatcher', methods=['POST'])
 def lux_trendcatcher_webhook():
-    data = request.json
+    if request.is_json:
+        data = request.get_json()
+    else:
+        try:
+            data = json.loads(request.data.decode('utf-8'))
+        except json.JSONDecodeError:
+            return jsonify({'error': 'invalid json'}), 400
     today_date = datetime.now().strftime('%Y-%m-%d')
     file_name = f'lux_trendcatcher_{today_date}.json'
     
@@ -81,7 +99,13 @@ def lux_trendcatcher_webhook():
 
 @app.route('/lux_exits', methods=['POST'])
 def lux_exits_webhook():
-    data = request.json
+    if request.is_json:
+        data = request.get_json()
+    else:
+        try:
+            data = json.loads(request.data.decode('utf-8'))
+        except json.JSONDecodeError:
+            return jsonify({'error': 'invalid json'}), 400
     today_date = datetime.now().strftime('%Y-%m-%d')
     file_name = f'lux_exits_{today_date}.json'
     
