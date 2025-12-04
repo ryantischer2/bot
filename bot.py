@@ -14,7 +14,7 @@ import os
 TRADIER_TOKEN = 'YOUR_TRADIER_ACCESS_TOKEN'  # Get from https://tradier.com/
 XAI_API_KEY = 'YOUR_XAI_API_KEY'  # From https://x.ai/api
 DISCORD_WEBHOOK = 'https://discord.com/api/webhooks/1444530076145160305/Nlfk_97ZfXpavKxbHz4B0uF0odbbKcTRjO18gRPFm52LX2_8s7-HQNI1ZaE8HbHfvSPz'
-TRADERSPOST_WEBHOOK = 'https://webhooks.traderspost.io/trading/webhook/30aa3729-a189-4dda-8ddf-62d7fba63ac0/a5011e30a9f047f18fa12645953663d9'
+TRADERSPOST_WEBHOOK = 'https://webhooks.traderspost.io/trading/webhook/20aa3729-a189-4dda-8ddf-62d7fba63ac0/a5011e30a9f047f18fa12645953663d9'
 
 # Headers for Tradier API
 tradier_headers = {
