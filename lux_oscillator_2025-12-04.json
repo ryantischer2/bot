@@ -1,0 +1,704 @@
+[
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.92,
+      "high": 684.7599,
+      "low": 683.63,
+      "close": 684.45,
+      "volume": 1055013
+    },
+    "bartime": 1764858900000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.84,
+      "high": 684.13,
+      "low": 683.35,
+      "close": 683.5,
+      "volume": 960546
+    },
+    "bartime": 1764859500000
+  },
+  {
+    "alert": "Bullish overflow",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 685.3,
+      "high": 685.37,
+      "low": 682.75,
+      "close": 683.045,
+      "volume": 6128496
+    },
+    "bartime": 1764858600000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 685.3,
+      "high": 685.37,
+      "low": 682.75,
+      "close": 683.045,
+      "volume": 6128496
+    },
+    "bartime": 1764858600000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.18,
+      "high": 683.54,
+      "low": 682.96,
+      "close": 683.35,
+      "volume": 699240
+    },
+    "bartime": 1764860700000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.31,
+      "high": 683.41,
+      "low": 682.6671,
+      "close": 683.17,
+      "volume": 507655
+    },
+    "bartime": 1764861000000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 683.06,
+      "high": 683.81,
+      "low": 682.17,
+      "close": 683.595,
+      "volume": 3564289
+    },
+    "bartime": 1764860400000
+  },
+  {
+    "alert": "Bullish overflow",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 683.06,
+      "high": 683.81,
+      "low": 682.17,
+      "close": 683.595,
+      "volume": 3564289
+    },
+    "bartime": 1764860400000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.83,
+      "high": 684.53,
+      "low": 683.79,
+      "close": 684.45,
+      "volume": 679459
+    },
+    "bartime": 1764862500000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.46,
+      "high": 684.56,
+      "low": 684.02,
+      "close": 684.23,
+      "volume": 792976
+    },
+    "bartime": 1764862800000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.24,
+      "high": 684.33,
+      "low": 683.38,
+      "close": 683.75,
+      "volume": 597460
+    },
+    "bartime": 1764863100000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.76,
+      "high": 683.79,
+      "low": 683.132,
+      "close": 683.41,
+      "volume": 736641
+    },
+    "bartime": 1764863400000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.76,
+      "high": 683.79,
+      "low": 683.132,
+      "close": 683.41,
+      "volume": 736641
+    },
+    "bartime": 1764863400000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.28,
+      "high": 683.6,
+      "low": 682.57,
+      "close": 682.71,
+      "volume": 620097
+    },
+    "bartime": 1764864000000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.67,
+      "high": 683.1744,
+      "low": 682.21,
+      "close": 683.16,
+      "volume": 826136
+    },
+    "bartime": 1764864300000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.18,
+      "high": 683.28,
+      "low": 682.56,
+      "close": 683.05,
+      "volume": 382700
+    },
+    "bartime": 1764864600000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.05,
+      "high": 683.55,
+      "low": 682.84,
+      "close": 683.51,
+      "volume": 275256
+    },
+    "bartime": 1764864900000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.05,
+      "high": 683.55,
+      "low": 682.84,
+      "close": 683.51,
+      "volume": 275256
+    },
+    "bartime": 1764864900000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.31,
+      "high": 683.64,
+      "low": 682.965,
+      "close": 683.1433,
+      "volume": 369549
+    },
+    "bartime": 1764865800000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.23,
+      "high": 683.2452,
+      "low": 682.86,
+      "close": 683.01,
+      "volume": 361654
+    },
+    "bartime": 1764866400000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.01,
+      "high": 684.04,
+      "low": 683.01,
+      "close": 683.97,
+      "volume": 632532
+    },
+    "bartime": 1764866700000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 683.31,
+      "high": 684.56,
+      "low": 682.86,
+      "close": 684.42,
+      "volume": 2684000
+    },
+    "bartime": 1764865800000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.175,
+      "high": 684.19,
+      "low": 683.51,
+      "close": 683.68,
+      "volume": 386824
+    },
+    "bartime": 1764867900000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 684.4,
+      "high": 684.58,
+      "low": 683.37,
+      "close": 684.02,
+      "volume": 2324793
+    },
+    "bartime": 1764867600000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.19,
+      "high": 684.34,
+      "low": 684.045,
+      "close": 684.08,
+      "volume": 283285
+    },
+    "bartime": 1764870300000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 684.03,
+      "high": 684.495,
+      "low": 683.595,
+      "close": 684.305,
+      "volume": 1645758
+    },
+    "bartime": 1764869400000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.18,
+      "high": 684.19,
+      "low": 683.465,
+      "close": 683.77,
+      "volume": 441269
+    },
+    "bartime": 1764871500000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.03,
+      "high": 684.42,
+      "low": 684.02,
+      "close": 684.4,
+      "volume": 228189
+    },
+    "bartime": 1764872400000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 684.29,
+      "high": 684.77,
+      "low": 683.465,
+      "close": 684.6774,
+      "volume": 1798793
+    },
+    "bartime": 1764871200000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.48,
+      "high": 684.535,
+      "low": 683.91,
+      "close": 684.1,
+      "volume": 487047
+    },
+    "bartime": 1764873600000
+  },
+  {
+    "alert": "Strong bullish confluence",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 684.67,
+      "high": 684.75,
+      "low": 683.91,
+      "close": 684.12,
+      "volume": 2159288
+    },
+    "bartime": 1764873000000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.925,
+      "high": 684.2181,
+      "low": 683.75,
+      "close": 683.9527,
+      "volume": 350915
+    },
+    "bartime": 1764875100000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.94,
+      "high": 683.96,
+      "low": 683.4101,
+      "close": 683.6225,
+      "volume": 517111
+    },
+    "bartime": 1764875400000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.62,
+      "high": 683.62,
+      "low": 682.51,
+      "close": 682.565,
+      "volume": 713113
+    },
+    "bartime": 1764875700000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.56,
+      "high": 682.6355,
+      "low": 681.34,
+      "close": 681.8668,
+      "volume": 1599481
+    },
+    "bartime": 1764876000000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 681.87,
+      "high": 682.63,
+      "low": 681.81,
+      "close": 682.18,
+      "volume": 761253
+    },
+    "bartime": 1764876300000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 684.11,
+      "high": 684.23,
+      "low": 681.34,
+      "close": 682.18,
+      "volume": 4305530
+    },
+    "bartime": 1764874800000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.19,
+      "high": 683.07,
+      "low": 681.99,
+      "close": 683.058,
+      "volume": 610223
+    },
+    "bartime": 1764876600000
+  },
+  {
+    "alert": "Oversold Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.19,
+      "high": 683.07,
+      "low": 681.99,
+      "close": 683.058,
+      "volume": 610223
+    },
+    "bartime": 1764876600000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.065,
+      "high": 683.96,
+      "low": 683.06,
+      "close": 683.43,
+      "volume": 1101048
+    },
+    "bartime": 1764876900000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.43,
+      "high": 683.59,
+      "low": 683.09,
+      "close": 683.4,
+      "volume": 567004
+    },
+    "bartime": 1764877200000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.24,
+      "high": 683.38,
+      "low": 682.83,
+      "close": 682.84,
+      "volume": 585053
+    },
+    "bartime": 1764878400000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.82,
+      "high": 682.99,
+      "low": 682.31,
+      "close": 682.92,
+      "volume": 844469
+    },
+    "bartime": 1764878700000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.29,
+      "high": 683.34,
+      "low": 682.9,
+      "close": 683.25,
+      "volume": 543462
+    },
+    "bartime": 1764879300000
+  },
+  {
+    "alert": "Bearish overflow",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.265,
+      "high": 683.34,
+      "low": 682.98,
+      "close": 682.99,
+      "volume": 506764
+    },
+    "bartime": 1764879600000
+  },
+  {
+    "alert": "Hyper Wave oscillator downward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.9801,
+      "high": 683.1799,
+      "low": 682.75,
+      "close": 682.7501,
+      "volume": 579076
+    },
+    "bartime": 1764879900000
+  },
+  {
+    "alert": "Bearish overflow",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.9801,
+      "high": 683.1799,
+      "low": 682.75,
+      "close": 682.7501,
+      "volume": 579076
+    },
+    "bartime": 1764879900000
+  },
+  {
+    "alert": "Strong bearish confluence",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.76,
+      "high": 683.24,
+      "low": 682.7,
+      "close": 683.115,
+      "volume": 446227
+    },
+    "bartime": 1764880200000
+  },
+  {
+    "alert": "Bearish overflow",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.76,
+      "high": 683.24,
+      "low": 682.7,
+      "close": 683.115,
+      "volume": 446227
+    },
+    "bartime": 1764880200000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.129,
+      "high": 683.31,
+      "low": 682.91,
+      "close": 683.255,
+      "volume": 493298
+    },
+    "bartime": 1764880500000
+  },
+  {
+    "alert": "Bearish overflow",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.129,
+      "high": 683.31,
+      "low": 682.91,
+      "close": 683.255,
+      "volume": 493298
+    },
+    "bartime": 1764880500000
+  },
+  {
+    "alert": "Bearish overflow",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 683.26,
+      "high": 683.31,
+      "low": 682.875,
+      "close": 682.955,
+      "volume": 535803
+    },
+    "bartime": 1764880800000
+  },
+  {
+    "alert": "Bearish overflow",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 682.96,
+      "high": 683.18,
+      "low": 682.77,
+      "close": 683.11,
+      "volume": 948957
+    },
+    "bartime": 1764881100000
+  },
+  {
+    "alert": "Hyper Wave oscillator upward signal",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 682.76,
+      "high": 684.58,
+      "low": 682.7,
+      "close": 684.4,
+      "volume": 6484271
+    },
+    "bartime": 1764880200000
+  }
+]

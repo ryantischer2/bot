@@ -1,0 +1,119 @@
+[
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 687.87,
+      "high": 687.96,
+      "low": 687.86,
+      "close": 687.96,
+      "volume": 783
+    },
+    "bartime": 1766578200000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 687.73,
+      "high": 688.13,
+      "low": 687.69,
+      "close": 687.91,
+      "volume": 11397
+    },
+    "bartime": 1766577600000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "3",
+    "ohlcv": {
+      "open": 688.14,
+      "high": 688.18,
+      "low": 688.1,
+      "close": 688.18,
+      "volume": 2553
+    },
+    "bartime": 1766583540000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "3",
+    "ohlcv": {
+      "open": 688.7,
+      "high": 688.865,
+      "low": 688.65,
+      "close": 688.85,
+      "volume": 46981
+    },
+    "bartime": 1766588760000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 688.87,
+      "high": 689.08,
+      "low": 688.84,
+      "close": 689.02,
+      "volume": 153449
+    },
+    "bartime": 1766589000000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "15",
+    "ohlcv": {
+      "open": 689.47,
+      "high": 689.9,
+      "low": 689.37,
+      "close": 689.89,
+      "volume": 325963
+    },
+    "bartime": 1766592000000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "3",
+    "ohlcv": {
+      "open": 690.39,
+      "high": 690.42,
+      "low": 690.27,
+      "close": 690.38,
+      "volume": 76211
+    },
+    "bartime": 1766594340000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 690.545,
+      "high": 690.64,
+      "low": 690.52,
+      "close": 690.59,
+      "volume": 89979
+    },
+    "bartime": 1766596200000
+  },
+  {
+    "alert": "Confirmation + ExitsBearish Exit",
+    "ticker": "SPY",
+    "tf": "3",
+    "ohlcv": {
+      "open": 689.76,
+      "high": 689.76,
+      "low": 689.7,
+      "close": 689.7,
+      "volume": 458
+    },
+    "bartime": 1766612340000
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "alert": "Within Bearish Block [684.91684.61]",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.71,
+      "high": 684.71,
+      "low": 684.71,
+      "close": 684.71,
+      "volume": 41
+    },
+    "bartime": 1764857100000
+  },
+  {
+    "alert": "Bearish Imbalance Exited Block [684.91684.61]",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.71,
+      "high": 684.98,
+      "low": 684.71,
+      "close": 684.9401,
+      "volume": 44587
+    },
+    "bartime": 1764857100000
+  },
+  {
+    "alert": "Bearish Block Entered [685.4685.23]",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.71,
+      "high": 685.5,
+      "low": 684.71,
+      "close": 685.5,
+      "volume": 68587
+    },
+    "bartime": 1764857100000
+  },
+  {
+    "alert": "Bearish Order Block Mitigated [685.4685.23]",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.71,
+      "high": 685.53,
+      "low": 684.71,
+      "close": 685.43,
+      "volume": 76191
+    },
+    "bartime": 1764857100000
+  },
+  {
+    "alert": "New Bullish Order Block [684.16683.86]",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 684.71,
+      "high": 685.53,
+      "low": 684.71,
+      "close": 685.43,
+      "volume": 76191
+    },
+    "bartime": 1764857100000
+  }
+]

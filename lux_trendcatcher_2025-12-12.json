@@ -1,0 +1,224 @@
+[
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765530190239
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765531640941
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765533817781
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765535410917
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765536720173
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765539362472
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765541544835
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765543502016
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765544225311
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765547104565
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765547284653
+  },
+  {
+    "alert": "Swing free buy 5 min",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765547702182
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765549081538
+  },
+  {
+    "alert": "swing Free SELL 5 min",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765549805024
+  },
+  {
+    "alert": "SPY Crossing 685.56",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765552563509
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765558980937
+  },
+  {
+    "alert": "Swing free buy 5 min",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765560000925
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765560780355
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765561140367
+  },
+  {
+    "alert": "TSLA Crossing 454.91",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765563424692
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765565281160
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765568521025
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765568701319
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765568881025
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765570860434
+  },
+  {
+    "alert": "swing Free SELL 5 min",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765572000556
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765573020335
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765577030061
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765577535750
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765578286994
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765578840167
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765580242733
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765581300555
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765582080194
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765584420159
+  },
+  {
+    "alert": "Knn Switch bearish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765584600184
+  },
+  {
+    "alert": "Knn Switch Bullish",
+    "ticker": "SPY",
+    "tf": "unknown",
+    "bartime": 1765587089135
+  }
+]

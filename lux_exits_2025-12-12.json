@@ -1,0 +1,106 @@
+[
+  {
+    "alert": "Confirmation + ExitsBearish Exit",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 688.24,
+      "high": 688.32,
+      "low": 688.07,
+      "close": 688.07,
+      "volume": 572
+    },
+    "bartime": 1765532100000
+  },
+  {
+    "alert": "Confirmation + ExitsBearish Exit",
+    "ticker": "SPY",
+    "tf": "3",
+    "ohlcv": {
+      "open": 687.79,
+      "high": 687.86,
+      "low": 687.74,
+      "close": 687.84,
+      "volume": 453
+    },
+    "bartime": 1765540440000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "3",
+    "ohlcv": {
+      "open": 688.76,
+      "high": 688.81,
+      "low": 688.72,
+      "close": 688.78,
+      "volume": 1507
+    },
+    "bartime": 1765545660000
+  },
+  {
+    "alert": "Confirmation + Exits Bullish Exit",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 688.74,
+      "high": 688.97,
+      "low": 688.67,
+      "close": 688.92,
+      "volume": 6019
+    },
+    "bartime": 1765547100000
+  },
+  {
+    "alert": "Confirmation + ExitsBearish Exit",
+    "ticker": "SPY",
+    "tf": "3",
+    "ohlcv": {
+      "open": 687.95,
+      "high": 688.15,
+      "low": 687.73,
+      "close": 687.84,
+      "volume": 73220
+    },
+    "bartime": 1765550700000
+  },
+  {
+    "alert": "Confirmation + ExitsBearish Exit",
+    "ticker": "SPY",
+    "tf": "5",
+    "ohlcv": {
+      "open": 685.9,
+      "high": 686.13,
+      "low": 685.37,
+      "close": 685.87,
+      "volume": 132634
+    },
+    "bartime": 1765552500000
+  },
+  {
+    "alert": "Confirmation + ExitsBearish Exit",
+    "ticker": "SPY",
+    "tf": "3",
+    "ohlcv": {
+      "open": 680.98,
+      "high": 681.78,
+      "low": 680.92,
+      "close": 681.04,
+      "volume": 89132
+    },
+    "bartime": 1765555560000
+  },
+  {
+    "alert": "Confirmation + ExitsBearish Exit",
+    "ticker": "SPY",
+    "tf": "30",
+    "ohlcv": {
+      "open": 681.97,
+      "high": 682.51,
+      "low": 681.1,
+      "close": 681.36,
+      "volume": 865377
+    },
+    "bartime": 1765569600000
+  }
+]

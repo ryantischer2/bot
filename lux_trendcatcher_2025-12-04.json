@@ -1,0 +1,54 @@
+[
+  {
+    "alert": "Trend Catcher Bearish 5 Min",
+    "ticker": "{ticker}",
+    "tf": "{tf}",
+    "ohlcv": {
+      "open": 500.0,
+      "high": 501.0,
+      "low": 499.0,
+      "close": 500.5,
+      "volume": 1000000
+    },
+    "bartime": 1733312320000
+  },
+  {
+    "alert": "Trend Catcher Bullish 1 Min",
+    "ticker": "{ticker}",
+    "tf": "{tf}",
+    "ohlcv": {
+      "open": 500.0,
+      "high": 501.0,
+      "low": 499.0,
+      "close": 500.5,
+      "volume": 1000000
+    },
+    "bartime": 1733312320000
+  },
+  {
+    "alert": "Trend Catcher Bearish 1 Min",
+    "ticker": "{ticker}",
+    "tf": "{tf}",
+    "ohlcv": {
+      "open": 500.0,
+      "high": 501.0,
+      "low": 499.0,
+      "close": 500.5,
+      "volume": 1000000
+    },
+    "bartime": 1733312320000
+  },
+  {
+    "alert": "Trend Catcher Bearish 5 Min",
+    "ticker": "{ticker}",
+    "tf": "{tf}",
+    "ohlcv": {
+      "open": 500.0,
+      "high": 501.0,
+      "low": 499.0,
+      "close": 500.5,
+      "volume": 1000000
+    },
+    "bartime": 1733312320000
+  }
+]
